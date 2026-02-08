@@ -21,14 +21,14 @@
 
 ## ⚙️ Architecture
 
-```mermaid
+```bash
 graph TD
     User[Student / Teacher] --WhatsApp--> MetaAPI
     MetaAPI --Webhook--> NextJS[Next.js Server (Vercel)]
     NextJS --Prompt--> AI[LLM Engine]
     NextJS --Minting--> Base[Base Blockchain]
     Base --Reputation--> SmartContract[Agent Registry (ERC-8004)]
-
+```
 
 ---
 

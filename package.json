@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@coinbase/coinbase-sdk": "^0.25.0",
+    "@neynar/nodejs-sdk": "^3.131.0",
     "axios": "^1.13.4",
     "lucide-react": "^0.563.0",
     "next": "16.1.6",

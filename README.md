@@ -98,8 +98,11 @@ npx hardhat run scripts/deploy.js --network base-sepolia
 ```
 
 ### 🔮 Future Roadmap
-Farcaster Integration: Allow students to login via Warpcast/Farcaster Frames.
 
-Crypto Payments: Teachers can set exam fees in USDC (Base).
+*AI Agent Framework:* Coinbase AgentKit (CDP SDK)
+*Social Layer:* Neynar SDK (Farcaster Integration)
 
-DAO Governance: Top-performing students can vote on school curriculum.
+## 🔗 Evidence of Autonomy (On-chain)
+EduAgent operates independently on the Base Sepolia network:
+* **Verified Transaction:** [View on Basescan](https://sepolia.basescan.org/tx/0x85394721a0eea5b93ca65dc66e073665358b78cc7a15bd3a83972485b00fed87)
+* **Autonomous Social Proof:** [View on Farcaster/Warpcast](https://warpcast.com/pencabul.eth) (Agent's automated grading announcement)

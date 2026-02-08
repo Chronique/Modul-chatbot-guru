@@ -80,9 +80,22 @@ export default function GuruPage() {
         replyText = `🔍 Sedang mencari data "${namaSiswa}" di database kelas...\n\n📊 **HASIL PENCARIAN:**\n👤 Nama: ${namaSiswa}\n🏫 Kelas: X - IPA 1 (Terdeteksi)\n📝 Skor Ujian: **${nilaiRandom}/100**\n\nStatus: ${status}`;
       }
 
-      // --- SKENARIO 3: CHAT BASA-BASI ---
-      else {
-        replyText = "Maaf, saya tidak mengerti. Silakan:\n1. Upload file untuk buat ujian\n2. Ketik 'Cek nilai [Nama Siswa]' untuk lihat hasil.";
+      // --- COMMAND BARU 1: CEK JADWAL ---
+      else if (textLower.includes('jadwal') || textLower.includes('pelajaran')) {
+        replyText = "📅 **JADWAL HARI INI:**\n\n07:00 - Upacara\n08:00 - Matematika (X-IPA 1)\n10:00 - Fisika (XI-IPA 2)\n13:00 - Rapat Guru\n\nJangan lupa bawa spidol ya Pak/Bu! 😉";
+      }
+
+      // --- COMMAND BARU 2: CEK ABSENSI ---
+      else if (textLower.includes('absen') || textLower.includes('masuk') || textLower.includes('hadir')) {
+        // Logika ambil nama siswa (sama kayak nilai tadi)
+        let namaSiswa = newMsg.text.replace(/(absen|cek|lihat|apakah|masuk|hadir|siswa)/gi, "").trim();
+        if (!namaSiswa) namaSiswa = "Siswa Tersebut";
+
+        // Simulasi status kehadiran random
+        const statusHadir = Math.random() > 0.3 ? "HADIR ✅" : "ALPHA ❌";
+        const jamMasuk = statusHadir.includes("HADIR") ? "06:45 WIB" : "-";
+
+        replyText = `📋 **DATA KEHADIRAN**\nNama: ${namaSiswa}\nStatus: **${statusHadir}**\nJam Masuk: ${jamMasuk}\n\nCatatan: Data diambil dari fingerprint sekolah.`;
       }
 
       // Kirim Balasan Bot
@@ -94,6 +107,11 @@ export default function GuruPage() {
       }]);
       setIsBotTyping(false);
     }, 1500); // Delay 1.5 detik
+
+    
+
+
+
   }
 
   

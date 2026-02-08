@@ -34,7 +34,7 @@ graph TD
 
 ## Key Features
 
-##🤖 AI Grading Agent: Automatically scans, analyzes, and scores student answers via WhatsApp.
+## 🤖 AI Grading Agent: Automatically scans, analyzes, and scores student answers via WhatsApp.
 
 ## 🔗 Onchain Certification: Issues a tamper-proof NFT (Sertifikat) to the student's wallet upon passing (Score > 70).
 

@@ -21,20 +21,20 @@
 
 ## ⚙️ Architecture
 
-```mermaid
+```bash
 graph TD
     User[Student / Teacher] --WhatsApp--> MetaAPI
     MetaAPI --Webhook--> NextJS[Next.js Server (Vercel)]
     NextJS --Prompt--> AI[LLM Engine]
     NextJS --Minting--> Base[Base Blockchain]
     Base --Reputation--> SmartContract[Agent Registry (ERC-8004)]
-
+```
 
 ---
 
 ## Key Features
 
-##🤖 AI Grading Agent: Automatically scans, analyzes, and scores student answers via WhatsApp.
+## 🤖 AI Grading Agent: Automatically scans, analyzes, and scores student answers via WhatsApp.
 
 ## 🔗 Onchain Certification: Issues a tamper-proof NFT (Sertifikat) to the student's wallet upon passing (Score > 70).
 
@@ -102,7 +102,11 @@ npx hardhat run scripts/deploy.js --network base-sepolia
 *AI Agent Framework:* Coinbase AgentKit (CDP SDK)
 *Social Layer:* Neynar SDK (Farcaster Integration)
 
+<<<<<<< HEAD
 ## 🔗 Evidence of Autonomy (On-chain)
 EduAgent operates independently on the Base Sepolia network:
 * **Verified Transaction:** [View on Basescan](https://sepolia.basescan.org/tx/0x85394721a0eea5b93ca65dc66e073665358b78cc7a15bd3a83972485b00fed87)
 * **Autonomous Social Proof:** [View on Farcaster/Warpcast](https://warpcast.com/pencabul.eth) (Agent's automated grading announcement)
+=======
+DAO Governance: Top-performing students can vote on school curriculum.
+>>>>>>> 0d87c6654d998ed8bd83c9bafbfa517cc4a953b3
